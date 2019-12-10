@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Reverse Map</title>
+</head>
+
+<body>
+<h1>Map &amp; 2D Array - Reverse HashMap Problem</h1>
+<hr>
+<table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td align="center"><strong>Here is Part of the JUnit Test</strong></td>
+      <td align="center"><strong>Output From the Two Added println's</strong></td>
+    </tr>
+    <tr>
+      <td><pre>
+<strong>public</strong> <strong>void</strong> testReverseHashmap() {
+   HashMap&lt;Integer,String&gt; map = <strong>new</strong> HashMap&lt;Integer,String&gt;();
+   map.put(1, "B");
+   map.put(2, "B");
+   map.put(3, "C");
+   map.put(9, "foo");
+   map.put(10, "foo");
+   map.put(11, "foo");
+   map.put(12, "foo");
+		
+   HashMap&lt;String,ArrayList&lt;Integer&gt;&gt; reverse = MapAnd2DArrayHomework.reverseHashmap(map);
+		
+   // These 2 println's lines added by Dr. Holly so we can see the two maps
+   System.out.println("map: " + map.toString());
+   System.out.println("reverse: " + reverse.toString());
+		
+   // remainder of JUnit test code goes here
+} // testReverseHashmap</pre></td>
+      <td><pre>
+map: {1=B, 2=B, 3=C, 9=foo, 10=foo, 11=foo, 12=foo}
+reverse: {B=[1, 2], C=[3], foo=[9, 10, 11, 12]}</pre></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
