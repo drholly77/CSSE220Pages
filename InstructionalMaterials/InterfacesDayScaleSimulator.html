@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Interfaces Day - ScaleSimulator UML</title>
+</head>
+
+<body>
+	<h1>Interfaces Day - ScaleSimulator UML</h1>
+	<hr>
+	<table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td>Scale Simulator UML</td>
+      <td>Scale Simulator UML Code</td>
+    </tr>
+    <tr>
+      <td width="605"><img src="ScaleSimulatorAfterUML.png" width="602" height="386" alt=""/></td>
+      <td><pre>@startuml
+skinparam style strictuml
+
+class ScaleSimulator{
+  reportAllComparison() : void
+}
+
+ScaleSimulator ..&gt; Ball
+ScaleSimulator ..&gt; Cube
+ScaleSimulator ..&gt; Cylinder
+ScaleSimulator -&gt; "*" Weighable
+
+Ball ..|&gt; Weighable
+Cube ..|&gt; Weighable
+Cylinder ..|&gt; Weighable
+
+
+Interface Weighable &lt;&lt;interface&gt;&gt;{
+   getWeightInLbs(): double
+}
+
+class Ball{
+   radius : double
+}
+
+class Cube {
+   sideLength : double
+   getMassInKG() : double
+}
+
+class Cylinder {
+   radius : double
+   sideLength : double
+   getWeightInTons() : double
+}
+@enduml
+</pre></td>
+    </tr>
+  </tbody>
+</table>
+	
+</body>
+</html>
